@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>ASL Go Fish</title>
+        <link rel="stylesheet" type="text/css" href=".src/styling.css">
+    </head>
+
+    <body onload="main()">
+        <p>Your hand: </p>
+        <div id="hand"></div>
+        <p>Cards on the table:</p>
+        <p id="down"></p>
+        <br><br>
+
+        <div id="buttons">
+            <button type="button" class="input" onclick="askForInput('loseCard')">They guessed right</button>
+            <button type="button" class="input" onclick="askForInput('addCard')">You guessed right</button>
+            <button type="button" class="input" onclick="askForInput('goFish')">Go fish!</button>
+            <button type="button" class="input" onclick="undoAction()">Undo last action</button>
+        </div>
+
+        <p id="inputReq"></p>
+        <div id="cancel"></div>
+    
+        <script src=".src/words.js"></script>
+        <script src=".src/utilities.js"></script>
+        <script src=".src/hand.js"></script>
+        <script src=".src/main.js"></script>
+    </body>
+
+</html>
