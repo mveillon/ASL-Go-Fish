@@ -1,0 +1,15 @@
+const allWords = [
+    'Year',
+    'Month',
+    'Day',
+    'Hour',
+    'Minute',
+    'Second',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+    'Sunday',
+];
