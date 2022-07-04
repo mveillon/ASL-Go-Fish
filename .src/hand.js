@@ -51,3 +51,11 @@ class Hand {
         return res;
     }
 }
+
+/**
+ * Pushes a deep copy of currentHand to lastHand
+ */
+ function pushHand() {
+    lastHands.push(currentHand.copy());
+}
+

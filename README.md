@@ -1,7 +1,7 @@
 # ASL Go Fish
 Hello! This is a simple UI for playing Go Fish with ASL words. You need to download this code to play along. To do so, click the green "Code" button on the right side of the screen. This will open a dropdown menu, where you need to click "Download ZIP". This will download a ZIP file to your downloads folder. Lastly, you need to unzip the folder, which you do just by double-clicking it, as if it were any other file that you were opening. Congratulations, you have the code! Now you just need to open the "OPEN ME.html" file, which will run the program.
 
-Side note: I know it looks like there's only one file other than the README, and you may be wondering why you had to do all these GitHub nonsense. There's actually many files, but most of them are hidden, because aside from what I'm about to tell you, you really shouldn't be touching them :)
+Side note: I know it looks like there's only one file other than the README (that's this!), and you may be wondering why you had to do all these GitHub nonsense. There's actually many files, but most of them are hidden, because aside from what I'm about to tell you, you really shouldn't be touching them :)
 
 The code can only be programmed to use words from one lesson at a time, but these can be changed if we want to play this again in later lessons. To do so, I'd recommend asking me (Michael), but I'll also include instructions in here.
 

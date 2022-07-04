@@ -98,10 +98,3 @@ function doAction() {
     updateHandDisplay();
     clearChildren(document.getElementById('cancel'));
 }
-
-/**
- * Pushes a deep copy of currentHand to lastHand
- */
-function pushHand() {
-    lastHands.push(currentHand.copy());
-}
