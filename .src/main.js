@@ -69,7 +69,7 @@ function cardClick(card) {
             'addCard'  : () => currentHand.addCard(card),
             'goFish'   : function () {
                 if (currentHand.drawCard() === card) {
-                    req.innerHTML = 'You drawed the card you asked for so you get to go again!';
+                    req.innerHTML = 'You drew the card you asked for so you get to go again!';
                 }
             }
         };
