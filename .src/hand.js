@@ -15,7 +15,7 @@ class Hand {
      * @returns {string} the drawn card
      */
     drawCard() {
-        const res = allWords[randInt(allWords.length)]
+        const res = allWords[randInt(allWords.length)];
         this.addCard(res);
         return res;
     }
