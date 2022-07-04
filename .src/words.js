@@ -1,3 +1,5 @@
+// TODO make these the actual words from Lesson 13
+
 const allWords = [
     'Year',
     'Month',

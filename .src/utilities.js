@@ -17,7 +17,7 @@ function randInt(min, max) {
 
 /**
  * Clears the children of the HTML element
- * @param {*} parent the HTML element to clear
+ * @param {HTMLElement} parent the HTML element to clear
  */
 function clearChildren(parent) {
     while (parent.firstChild) {
