@@ -1,6 +1,12 @@
 const HAND_SIZE = 5;
 const SET_SIZE = 4;
 
+const BUTTON_MAPPING = {
+    'loseCard' : 'Please click which card they got from you',
+    'addCard'  : 'Please click which card you got from them',
+    'goFish'   : "Please click which card you guessed that they didn't have"
+};
+
 /**
  * Returns a random integer in between min (inclusive) and max (exclusive)
  * @param {int} min the lower bound
@@ -38,4 +44,14 @@ function incrementObject(obj, prop, amount) {
     } else {
         obj[prop] = amount;
     }
+}
+
+/**
+ * Given a reason to start listening, return what to tell the user to click
+ * @param {string} reason which button the user clicked, supplied by the HTML
+ * @returns {string} the user-readable reason
+ */
+function inputDisplay(reason) {
+    if (!reason in BUTTON_MAPPING) console.log(reason);
+    else return BUTTON_MAPPING[reason] + ' or click "Cancel Selection"';
 }

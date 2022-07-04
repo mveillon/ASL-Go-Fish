@@ -12,22 +12,7 @@ function main() {
  */
 function askForInput(reason) {
     var req = document.getElementById('inputReq');
-    var toDisp = '';
-    switch (reason) {
-        case 'loseCard':
-            toDisp = 'Please click which card they got from you';
-            break;
-        case 'addCard':
-            toDisp = 'Please click which card you got from them';
-            break;
-        case 'goFish':
-            toDisp = "Please click which card you guessed that they didn't have";
-            break;
-        default:
-            console.log(reason);
-            break;
-    }
-    req.innerHTML = toDisp + ' or click "Cancel selection"';
+    req.innerHTML = inputDisplay(reason);
     listening = reason;
 
     var cancelButton = document.createElement('button');
@@ -75,28 +60,20 @@ function updateHandDisplay() {
  * @param {string} card the name of the clicked card
  */
 function cardClick(card) {
-    if (listening !== '') {
+    if (listening in BUTTON_MAPPING) {
         var req = document.getElementById('inputReq');
         req.innerHTML = '';
-        switch (listening) {
-            case 'loseCard':
-                pushHand();
-                currentHand.loseCard(card);
-                break;
-            case 'addCard':
-                pushHand();
-                currentHand.addCard(card);
-                break;
-            case 'goFish':
-                pushHand();
+        pushHand();
+        const button_funcs = {
+            'loseCard' : () => currentHand.loseCard(card),
+            'addCard'  : () => currentHand.addCard(card),
+            'goFish'   : function () {
                 if (currentHand.drawCard() === card) {
                     req.innerHTML = 'You already had this card so you get to go again!';
                 }
-                break;
-            default:
-                console.log(listening);
-                break;
-        }
+            }
+        };
+        button_funcs[listening]();
         doAction();
         listening = '';
     }
