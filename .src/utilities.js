@@ -1,5 +1,8 @@
 const HAND_SIZE = 5;
 const SET_SIZE = 4;
+const POOL_SIZE = 8;
+// probability of them having the card you ask for equals:
+// 1 - ((POOL_SIZE - 1) / POOL_SIZE) ** HAND_SIZE
 
 const BUTTON_MAPPING = {
     'loseCard' : 'Please click which card they got from you',
@@ -7,19 +10,7 @@ const BUTTON_MAPPING = {
     'goFish'   : "Please click which card you guessed that they didn't have"
 };
 
-/**
- * Returns a random integer in between min (inclusive) and max (exclusive)
- * @param {int} min the lower bound
- * @param {int} max the upper bound. If not provided, the number will be between 0 and min
- * @returns {int} a random integer in the provided range
- */
-function randInt(min, max) {
-    if (typeof max === 'undefined') {
-        max = min;
-        min = 0;
-    }
-    return Math.floor(Math.random() * (max - min) + min - 0.0001); // 0.0001 is just in case Math.random returns 1.0
-}
+const wordPool = choices(allWords, POOL_SIZE);
 
 /**
  * Clears the children of the HTML element

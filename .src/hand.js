@@ -4,10 +4,10 @@
 class Hand {
     constructor() {
         this.cards = {};
+        this.down = {};
         for (var i = 0; i < HAND_SIZE; i++) {
             this.drawCard();
         }
-        this.down = {};
     }
 
     /**
@@ -15,7 +15,7 @@ class Hand {
      * @returns {string} the drawn card
      */
     drawCard() {
-        const res = allWords[randInt(allWords.length)];
+        const res = choice(wordPool);
         this.addCard(res);
         return res;
     }
