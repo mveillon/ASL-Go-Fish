@@ -39,7 +39,7 @@ function updateHandDisplay() {
         for (var i = 0; i < currentHand.cards[card]; i++) {
             var newButton = document.createElement('button');
             newButton.id = card;
-            newButton.innerHTML = card;
+            newButton.innerHTML = capitalFirstLetter(card);
             newButton.onclick = () => cardClick(card);
             newButton.className = 'card';
             hand.appendChild(newButton);

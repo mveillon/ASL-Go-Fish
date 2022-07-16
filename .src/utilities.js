@@ -46,3 +46,12 @@ function inputDisplay(reason) {
     if (!reason in BUTTON_MAPPING) console.log(reason);
     else return BUTTON_MAPPING[reason] + ' or click "Cancel Selection"';
 }
+
+/**
+ * Makes the first letter of the string capitalized
+ * @param {string} s the string to capitalize
+ * @returns {string} the formatted string
+ */
+function capitalFirstLetter(s) {
+    return s.substring(0, 1).toUpperCase() + s.substring(1, s.length);
+}
