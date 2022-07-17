@@ -1,6 +1,6 @@
 const HAND_SIZE = 5;
 const SET_SIZE = 4;
-const POOL_SIZE = 8;
+const POOL_SIZE = 13;
 // probability of them having the card you ask for equals:
 // 1 - ((POOL_SIZE - 1) / POOL_SIZE) ** HAND_SIZE
 
